@@ -137,6 +137,20 @@ func_with_bad_comma(
     ), # comment after comma
 )
 
+func_with_bad_parens_that_wont_fit_in_one_line(
+    ("short string that should have parens stripped"),
+    x,
+    y,
+    z
+)
+
+func_with_bad_parens_that_wont_fit_in_one_line(
+    x,
+    y,
+    ("short string that should have parens stripped"),
+    z
+)
+
 func_with_bad_parens(
     ("short string that should have parens stripped"),
     x,
@@ -366,8 +380,7 @@ fmt_string2 = "But what about when the string is {} but {}".format(
 
 old_fmt_string1 = (
     "While we are on the topic of %s, we should also note that old-style formatting"
-    " must also be preserved, since some %s still uses it."
-    % ("formatting", "code")
+    " must also be preserved, since some %s still uses it." % ("formatting", "code")
 )
 
 old_fmt_string2 = "This is a %s %s %s %s" % (
@@ -434,8 +447,7 @@ assert some_type_of_boolean_expression, (
 
 assert some_type_of_boolean_expression, (
     "Followed by a really really really long string that is used to provide context to"
-    " the AssertionError exception, which uses dynamic string %s."
-    % "formatting"
+    " the AssertionError exception, which uses dynamic string %s." % "formatting"
 )
 
 assert some_type_of_boolean_expression, (
@@ -487,12 +499,26 @@ func_with_bad_comma(
     " which should NOT be there.",  # comment after comma
 )
 
-func_with_bad_parens(
-    "short string that should have parens stripped", x, y, z,
+func_with_bad_parens_that_wont_fit_in_one_line(
+    "short string that should have parens stripped", x, y, z
+)
+
+func_with_bad_parens_that_wont_fit_in_one_line(
+    x, y, "short string that should have parens stripped", z
 )
 
 func_with_bad_parens(
-    x, y, "short string that should have parens stripped", z,
+    "short string that should have parens stripped",
+    x,
+    y,
+    z,
+)
+
+func_with_bad_parens(
+    x,
+    y,
+    "short string that should have parens stripped",
+    z,
 )
 
 annotated_variable: Final = (

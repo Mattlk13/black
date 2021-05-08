@@ -16,7 +16,6 @@ __author__ = "Guido van Rossum <guido@python.org>"
 __all__ = ["Driver", "load_grammar"]
 
 # Python imports
-import codecs
 import io
 import os
 import logging
@@ -24,7 +23,6 @@ import pkgutil
 import sys
 from typing import (
     Any,
-    Callable,
     IO,
     Iterable,
     List,
@@ -32,7 +30,6 @@ from typing import (
     Text,
     Tuple,
     Union,
-    Sequence,
 )
 
 # Pgen imports
@@ -128,7 +125,7 @@ class Driver(object):
         return self.parse_stream_raw(stream, debug)
 
     def parse_file(
-        self, filename: Path, encoding: Optional[Text] = None, debug: bool = False,
+        self, filename: Path, encoding: Optional[Text] = None, debug: bool = False
     ) -> NL:
         """Parse a file and return the syntax tree."""
         with io.open(filename, "r", encoding=encoding) as stream:

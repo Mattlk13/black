@@ -310,6 +310,92 @@ class Step(StepBase):
             passenger_association=passenger_association,
         )
 
+xxxxxxx_xxxxxx_xxxxxxx = xxx(
+    [
+        xxxxxxxxxxxx(
+            xxxxxx_xxxxxxx=(
+                '((x.aaaaaaaaa = "xxxxxx.xxxxxxxxxxxxxxxxxxxxx") || (x.xxxxxxxxx = "xxxxxxxxxxxx")) && '
+                # xxxxx xxxxxxxxxxxx xxxx xxx (xxxxxxxxxxxxxxxx) xx x xxxxxxxxx xx xxxxxx.
+                "(x.bbbbbbbbbbbb.xxx != "
+                '"xxx:xxx:xxx::cccccccccccc:xxxxxxx-xxxx/xxxxxxxxxxx/xxxxxxxxxxxxxxxxx") && '
+            )
+        )
+    ]
+)
+
+if __name__ == "__main__":
+    for i in range(4, 8):
+        cmd = (
+            r"for pid in $(ps aux | grep paster | grep -v grep | grep '\-%d' | awk '{print $2}'); do kill $pid; done"
+            % (i)
+        )
+
+def A():
+    def B():
+        def C():
+            def D():
+                def E():
+                    def F():
+                        def G():
+                            assert (
+                                c_float(val[0][0] / val[0][1]).value
+                                == c_float(value[0][0] / value[0][1]).value
+                            ), "%s didn't roundtrip" % tag
+
+class xxxxxxxxxxxxxxxxxxxxx(xxxx.xxxxxxxxxxxxx):
+    def xxxxxxx_xxxxxx(xxxx):
+        assert xxxxxxx_xxxx in [
+            x.xxxxx.xxxxxx.xxxxx.xxxxxx,
+            x.xxxxx.xxxxxx.xxxxx.xxxx,
+        ], ("xxxxxxxxxxx xxxxxxx xxxx (xxxxxx xxxx) %x xxx xxxxx" % xxxxxxx_xxxx)
+
+value.__dict__[
+    key
+] = "test"  # set some Thrift field to non-None in the struct aa bb cc dd ee
+
+RE_ONE_BACKSLASH = {
+    "asdf_hjkl_jkl": re.compile(
+        r"(?<!([0-9]\ ))(?<=(^|\ ))([A-Z]+(\ )?|[0-9](\ )|[a-z](\ )){4,7}([A-Z]|[0-9]|[a-z])($|\b)(?!(\ ?([0-9]\ )|(\.)))"
+    ),
+}
+
+RE_TWO_BACKSLASHES = {
+    "asdf_hjkl_jkl": re.compile(
+        r"(?<!([0-9]\ ))(?<=(^|\ ))([A-Z]+(\ )?|[0-9](\ )|[a-z](\\ )){4,7}([A-Z]|[0-9]|[a-z])($|\b)(?!(\ ?([0-9]\ )|(\.)))"
+    ),
+}
+
+RE_THREE_BACKSLASHES = {
+    "asdf_hjkl_jkl": re.compile(
+        r"(?<!([0-9]\ ))(?<=(^|\ ))([A-Z]+(\ )?|[0-9](\ )|[a-z](\\\ )){4,7}([A-Z]|[0-9]|[a-z])($|\b)(?!(\ ?([0-9]\ )|(\.)))"
+    ),
+}
+
+# We do NOT split on f-string expressions.
+print(f"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam. {[f'{i}' for i in range(10)]}")
+x = f"This is a long string which contains an f-expr that should not split {{{[i for i in range(5)]}}}."
+
+# The parens should NOT be removed in this case.
+(
+    "my very long string that should get formatted if I'm careful to make sure it goes"
+    " over 88 characters which it has now"
+)
+
+# The parens should NOT be removed in this case.
+(
+    "my very long string that should get formatted if I'm careful to make sure it goes over 88 characters which"
+    " it has now"
+)
+
+# The parens should NOT be removed in this case.
+(
+    "my very long string"
+    " that should get formatted"
+    " if I'm careful to make sure"
+    " it goes over 88 characters which"
+    " it has now"
+)
+
 # output
 
 
@@ -435,14 +521,12 @@ func_call_where_string_arg_has_method_call_and_bad_parens(
 
 func_call_where_string_arg_has_old_fmt_and_bad_parens(
     "A long string with {}. This string is so long that it is ridiculous. It can't fit"
-    " on one line at alllll."
-    % "formatting",
+    " on one line at alllll." % "formatting",
 )
 
 func_call_where_string_arg_has_old_fmt_and_bad_parens(
     "A long string with {}. This {} is so long that it is ridiculous. It can't fit on"
-    " one line at alllll."
-    % ("formatting", "string"),
+    " one line at alllll." % ("formatting", "string"),
 )
 
 
@@ -528,17 +612,23 @@ class A:
         xxxxxxxx = [
             xxxxxxxxxxxxxxxx(
                 "xxxx",
-                xxxxxxxxxxx={"xxxx": 1.0,},
+                xxxxxxxxxxx={
+                    "xxxx": 1.0,
+                },
                 xxxxxx={"xxxxxx 1": xxxxxx(xxxx="xxxxxx 1", xxxxxx=600.0)},
                 xxxxxxxx_xxxxxxx=0.0,
             ),
             xxxxxxxxxxxxxxxx(
                 "xxxxxxx",
-                xxxxxxxxxxx={"xxxx": 1.0,},
+                xxxxxxxxxxx={
+                    "xxxx": 1.0,
+                },
                 xxxxxx={"xxxxxx 1": xxxxxx(xxxx="xxxxxx 1", xxxxxx=200.0)},
                 xxxxxxxx_xxxxxxx=0.0,
             ),
-            xxxxxxxxxxxxxxxx("xxxx",),
+            xxxxxxxxxxxxxxxx(
+                "xxxx",
+            ),
         ]
 
 
@@ -696,3 +786,103 @@ class Step(StepBase):
                 passenger_association=passenger_association,
             )
         )
+
+
+xxxxxxx_xxxxxx_xxxxxxx = xxx(
+    [
+        xxxxxxxxxxxx(
+            xxxxxx_xxxxxxx=(
+                '((x.aaaaaaaaa = "xxxxxx.xxxxxxxxxxxxxxxxxxxxx") || (x.xxxxxxxxx ='
+                ' "xxxxxxxxxxxx")) && '
+                # xxxxx xxxxxxxxxxxx xxxx xxx (xxxxxxxxxxxxxxxx) xx x xxxxxxxxx xx xxxxxx.
+                "(x.bbbbbbbbbbbb.xxx != "
+                '"xxx:xxx:xxx::cccccccccccc:xxxxxxx-xxxx/xxxxxxxxxxx/xxxxxxxxxxxxxxxxx") && '
+            )
+        )
+    ]
+)
+
+if __name__ == "__main__":
+    for i in range(4, 8):
+        cmd = (
+            r"for pid in $(ps aux | grep paster | grep -v grep | grep '\-%d' | awk"
+            r" '{print $2}'); do kill $pid; done" % (i)
+        )
+
+
+def A():
+    def B():
+        def C():
+            def D():
+                def E():
+                    def F():
+                        def G():
+                            assert (
+                                c_float(val[0][0] / val[0][1]).value
+                                == c_float(value[0][0] / value[0][1]).value
+                            ), "%s didn't roundtrip" % tag
+
+
+class xxxxxxxxxxxxxxxxxxxxx(xxxx.xxxxxxxxxxxxx):
+    def xxxxxxx_xxxxxx(xxxx):
+        assert xxxxxxx_xxxx in [
+            x.xxxxx.xxxxxx.xxxxx.xxxxxx,
+            x.xxxxx.xxxxxx.xxxxx.xxxx,
+        ], (
+            "xxxxxxxxxxx xxxxxxx xxxx (xxxxxx xxxx) %x xxx xxxxx" % xxxxxxx_xxxx
+        )
+
+
+value.__dict__[
+    key
+] = "test"  # set some Thrift field to non-None in the struct aa bb cc dd ee
+
+RE_ONE_BACKSLASH = {
+    "asdf_hjkl_jkl": re.compile(
+        r"(?<!([0-9]\ ))(?<=(^|\ ))([A-Z]+(\ )?|[0-9](\ )|[a-z](\ )){4,7}([A-Z]|[0-9]|[a-z])($|\b)(?!(\ ?([0-9]\ )|(\.)))"
+    ),
+}
+
+RE_TWO_BACKSLASHES = {
+    "asdf_hjkl_jkl": re.compile(
+        r"(?<!([0-9]\ ))(?<=(^|\ ))([A-Z]+(\ )?|[0-9](\ )|[a-z](\\"
+        r" )){4,7}([A-Z]|[0-9]|[a-z])($|\b)(?!(\ ?([0-9]\ )|(\.)))"
+    ),
+}
+
+RE_THREE_BACKSLASHES = {
+    "asdf_hjkl_jkl": re.compile(
+        r"(?<!([0-9]\ ))(?<=(^|\ ))([A-Z]+(\ )?|[0-9](\ )|[a-z](\\\ )){4,7}([A-Z]|[0-9]|[a-z])($|\b)(?!(\ ?([0-9]\ )|(\.)))"
+    ),
+}
+
+# We do NOT split on f-string expressions.
+print(
+    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam."
+    f" {[f'{i}' for i in range(10)]}"
+)
+x = (
+    "This is a long string which contains an f-expr that should not split"
+    f" {{{[i for i in range(5)]}}}."
+)
+
+# The parens should NOT be removed in this case.
+(
+    "my very long string that should get formatted if I'm careful to make sure it goes"
+    " over 88 characters which it has now"
+)
+
+# The parens should NOT be removed in this case.
+(
+    "my very long string that should get formatted if I'm careful to make sure it goes"
+    " over 88 characters which it has now"
+)
+
+# The parens should NOT be removed in this case.
+(
+    "my very long string"
+    " that should get formatted"
+    " if I'm careful to make sure"
+    " it goes over 88 characters which"
+    " it has now"
+)

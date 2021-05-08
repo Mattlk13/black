@@ -46,7 +46,7 @@ def zort():
 
 def poit():
   """
-  Lorem ipsum dolor sit amet.
+  Lorem ipsum dolor sit amet.       
 
   Consectetur adipiscing elit:
    - sed do eiusmod tempor incididunt ut labore
@@ -54,6 +54,14 @@ def poit():
      - enim ad minim veniam
      - quis nostrud exercitation ullamco laboris nisi
    - aliquip ex ea commodo consequat
+  """
+  pass
+
+
+def under_indent():
+  """
+  These lines are indented in a way that does not
+make sense.
   """
   pass
 
@@ -72,6 +80,113 @@ def single_line():
 
     """
     pass
+
+
+def this():
+    r"""
+    'hey ho'
+    """
+
+
+def that():
+  """ "hey yah" """
+
+
+def and_that():
+  """
+  "hey yah" """
+
+
+def and_this():
+  ''' 
+  "hey yah"'''
+
+
+def empty():
+    '''
+    
+    
+    
+    
+    '''
+
+
+def oneline_empty():
+    '''      '''
+
+
+def oneline_nothing():
+    """"""
+
+
+def single_quotes():
+    'testing'
+
+
+def believe_it_or_not_this_is_in_the_py_stdlib(): ''' 
+"hey yah"'''
+
+
+def ignored_docstring():
+    """a => \
+b"""  
+
+def single_line_docstring_with_whitespace():
+    """   This should be stripped """
+
+def docstring_with_inline_tabs_and_space_indentation():
+    """hey
+
+    tab	separated	value
+    	tab at start of line and then a tab	separated	value
+    				multiple tabs at the beginning	and	inline
+    	 	  	mixed tabs and spaces at beginning. next line has mixed tabs and spaces only.
+    			 	  		
+    line ends with some tabs		
+    """
+
+
+def docstring_with_inline_tabs_and_tab_indentation():
+	"""hey
+
+	tab	separated	value
+		tab at start of line and then a tab	separated	value
+					multiple tabs at the beginning	and	inline
+		 	  	mixed tabs and spaces at beginning. next line has mixed tabs and spaces only.
+				 	  		
+	line ends with some tabs		
+	"""
+	pass
+
+
+def backslash_space():
+    """\ """
+
+
+def multiline_backslash_1():
+  '''
+  hey\there\
+  \ '''
+
+
+def multiline_backslash_2():
+  '''
+  hey there \ '''
+
+
+def multiline_backslash_3():
+  '''
+  already escaped \\ '''
+
+
+def my_god_its_full_of_stars_1():
+    "I'm sorry Dave\u2001"
+
+
+# the space below is actually a \u2001, removed in output
+def my_god_its_full_of_stars_2():
+    "I'm sorry Dave "
+
 
 # output
 
@@ -136,6 +251,14 @@ def poit():
     pass
 
 
+def under_indent():
+    """
+      These lines are indented in a way that does not
+    make sense.
+    """
+    pass
+
+
 def over_indent():
     """
     This has a shallow indent
@@ -148,3 +271,107 @@ def over_indent():
 def single_line():
     """But with a newline after it!"""
     pass
+
+
+def this():
+    r"""
+    'hey ho'
+    """
+
+
+def that():
+    """ "hey yah" """
+
+
+def and_that():
+    """
+    "hey yah" """
+
+
+def and_this():
+    '''
+    "hey yah"'''
+
+
+def empty():
+    """ """
+
+
+def oneline_empty():
+    """ """
+
+
+def oneline_nothing():
+    """ """
+
+
+def single_quotes():
+    "testing"
+
+
+def believe_it_or_not_this_is_in_the_py_stdlib():
+    '''
+    "hey yah"'''
+
+
+def ignored_docstring():
+    """a => \
+b"""
+
+
+def single_line_docstring_with_whitespace():
+    """This should be stripped"""
+
+
+def docstring_with_inline_tabs_and_space_indentation():
+    """hey
+
+    tab	separated	value
+        tab at start of line and then a tab	separated	value
+                                multiple tabs at the beginning	and	inline
+                        mixed tabs and spaces at beginning. next line has mixed tabs and spaces only.
+
+    line ends with some tabs
+    """
+
+
+def docstring_with_inline_tabs_and_tab_indentation():
+    """hey
+
+    tab	separated	value
+            tab at start of line and then a tab	separated	value
+                                    multiple tabs at the beginning	and	inline
+                            mixed tabs and spaces at beginning. next line has mixed tabs and spaces only.
+
+    line ends with some tabs
+    """
+    pass
+
+
+def backslash_space():
+    """\ """
+
+
+def multiline_backslash_1():
+    """
+  hey\there\
+  \ """
+
+
+def multiline_backslash_2():
+    """
+    hey there \ """
+
+
+def multiline_backslash_3():
+    """
+    already escaped \\"""
+
+
+def my_god_its_full_of_stars_1():
+    "I'm sorry Dave\u2001"
+
+
+# the space below is actually a \u2001, removed in output
+def my_god_its_full_of_stars_2():
+    "I'm sorry Dave"

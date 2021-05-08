@@ -1,8 +1,14 @@
-FROM python:3
+FROM python:3-slim
 
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+RUN mkdir /src
+COPY . /src/
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
+    && apt update && apt install -y git \
+    && cd /src \
+    && pip install --no-cache-dir .[colorama,d] \
+    && rm -rf /src \
+    && apt remove -y git \
+    && apt autoremove -y \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade --no-cache-dir black
-
-ENTRYPOINT /usr/local/bin/black --check --diff  .
+CMD ["black"]
